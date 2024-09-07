@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 using WebApi.Models;
 
@@ -31,6 +32,37 @@ namespace WebApi.Controllers
 
 			return new JsonResult(Ok("User Successfully Registered"));
 		}
-	}
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var show = await context.Users.FirstOrDefaultAsync(option => option.Id == id);
+            if (show == null)
+            {
+                return NotFound();
+            }
+            context.Users.Remove(show);
+            context.SaveChangesAsync();
+            return Ok(show.Name + " User Deleted Succesfully");
+        }
+        
+            [HttpPut("{id}")]
+        public async Task<IActionResult> Edit(int id ,User user)
+        {
+            var show = await context.Users.FirstOrDefaultAsync(option => option.Id == id);
+            if (show == null)
+            {
+                return NotFound();
+            }
+            show.Name = user.Name;
+            show.Email = user.Email;
+            show.Password = user.Password;
+            show.Phone = user.Phone;
+            context.Users.Update(show);
+            context.SaveChangesAsync();
+
+            return Ok("User Successfully Updated");
+        }
+    }
     }
 

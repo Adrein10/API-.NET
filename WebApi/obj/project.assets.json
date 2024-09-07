@@ -10752,11 +10752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asp\\source\\repos\\WebApi\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\asp\\Source\\Repos\\Adrein10\\API-.NET\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\asp\\source\\repos\\WebApi\\WebApi\\WebApi.csproj",
+      "projectPath": "C:\\Users\\asp\\Source\\Repos\\Adrein10\\API-.NET\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\asp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asp\\source\\repos\\WebApi\\WebApi\\obj\\",
+      "outputPath": "C:\\Users\\asp\\Source\\Repos\\Adrein10\\API-.NET\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
